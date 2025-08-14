@@ -40,7 +40,7 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: minmax(10em, 40em) minmax(10em, 10em);
+    grid-template-columns: minmax(10em, auto) minmax(10em, auto);
     grid-template-areas: 
         "content nav";
 }
@@ -71,4 +71,8 @@ body p {
 
 h1, h2, h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    padding: 0;
 }
