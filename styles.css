@@ -41,8 +41,7 @@ table {
     border-radius: 5px;
     padding: 10px;
     height: auto;
-    
-}
+    }
 
 .contact-wrapper {
     display: flex;
@@ -59,8 +58,38 @@ table {
 body {
     background-color: #1e1e1e;
     color: #fafafa;
-    margin: 0 5em;
+    margin: 0 2em;
     }
+
+.intro {
+    height: 60vh;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 1em 0 0 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: blue;
+}
 
 /*********************
 MEDIA QUERIES
@@ -90,17 +119,20 @@ MEDIA QUERIES
         flex-direction: column;
         gap: 1em;
     }
+    body {
+        margin: 0 2em;
+    }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     body {
-        margin: 0 1em;
+        margin: 0 1.5em;
     }
 } 
 
 @media (max-width: 320px) {
     body {
-        margin: 0 1em;
+        margin: 0 1.5em;
     }
 }    
     
@@ -145,6 +177,7 @@ nav li {
 
 ul {
     padding: 0;
+    margin: 0;
 }
 
 /* Text-Decoration */
