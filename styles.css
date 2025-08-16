@@ -86,14 +86,15 @@ nav a:hover {
     background-color: #0f0f0f;
 }
 .open-sidebar {
-        display: none;
-        background: none;
-        border: none;
-        padding: 1em;
-        margin-left: auto;
-        cursor: pointer;
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
 }
 .close-sidebar {
+    display: none;
     background: none;
     border: none;
     padding: 1em;
@@ -105,6 +106,9 @@ nav a:hover {
     inset: 0;
     z-index: 9;
     display: none;
+}
+ul {
+    list-style: none;
 }
 /*****************
  Navigation 
