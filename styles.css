@@ -67,6 +67,9 @@ body {
 }
 nav {
     border-bottom: 2px solid #0f0f0f;
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
 }
 nav ul {
     list-style: none;
@@ -89,7 +92,7 @@ nav a:hover {
     display: none;
     background: none;
     border: none;
-    padding: 1em;
+    padding: 1em 5em;
     margin-left: auto;
     cursor: pointer;
 }
@@ -109,6 +112,8 @@ nav a:hover {
 }
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 /*****************
  Navigation 
@@ -116,10 +121,15 @@ ul {
 /*********************
 MEDIA QUERIES
 **********************/
+@media screen and (max-width: 2560px) {
+}
+@media screen and (max-width: 1440px) {
+}
 @media screen and (max-width: 1024px) {
     #container {
         flex-direction: column;
         align-items: center;
+        padding: 0 2em;
     }
     .project-wrapper {
         flex-direction: row;
@@ -159,6 +169,10 @@ MEDIA QUERIES
     }
     .open-sidebar, .close-sidebar {
         display: block;
+    }
+    .open-sidebar {
+        position: sticky;
+        top: 0;
     }
 }
 @media screen and (max-width: 426px) {
