@@ -36,7 +36,7 @@ table {
 .p1, .p2, .p3 {
     background-color: gray;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 20px;
     height: auto;
     }
 .contact-wrapper {
@@ -115,9 +115,6 @@ ul {
     margin: 0;
     padding: 0;
 }
-/*****************
- Navigation 
- *****************/
 /*********************
 MEDIA QUERIES
 **********************/
@@ -173,6 +170,8 @@ MEDIA QUERIES
     .open-sidebar {
         position: sticky;
         top: 0;
+        background-color: teal;
+        padding: 1em;
     }
 }
 @media screen and (max-width: 426px) {
