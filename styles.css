@@ -41,7 +41,8 @@ table {
     }
 .contact-wrapper {
     display: flex;
-    gap: 10px 
+    justify-content: space-between;
+    gap: 10px;
 }
 .skill-map {
     display: flex;
@@ -55,7 +56,7 @@ body {
     margin: 0;
 }
 #header {
-    margin: 5em 0 0 0;
+    margin: 25vh 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,8 +67,8 @@ body {
 }
 .intro h1 {
     font-size: calc(2.5em + 5vw);
-    margin: -10px 0 0 0;
-
+    line-height: .8;
+    margin: 0;
 }
 .intro p {
     font-size: calc(1.2em + 1vw);
@@ -98,10 +99,6 @@ nav a {
 }
 nav a:hover {
     background-color: #0f0f0f;
-}
-.github {
-    display flex;
-    flex-direction: column;
 }
 .open-sidebar {
     display: none;
@@ -206,7 +203,7 @@ MEDIA QUERIES
  Styles 
  ******************/
 .skill-map {
-    flex-direction: column;
+    flex-direction: row;
     align-items: start;
 }
 .tag {
