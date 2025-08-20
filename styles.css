@@ -7,23 +7,23 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #010D26;
+    background-color: #042940;
     color: #fff;
 }
 .btn {
     padding: 10px 20px;
-    background-color: #1335F2;
-    color: #fff;
+    background-color: #DBF227;
+    color: #042940;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease;
     margin-top: 30px;
+    font-weight: bold;
 }
 .btn:hover {
-    background-color: #fff;
-    color: #1335F2
+    background-color: #9FC131;
 }
 .bar {
     display: block;
@@ -47,10 +47,10 @@ body {
     align-items: center;
 }
 #hero {
-    text-align: center;
-    background-color: black;
+    background-color: #D6D58E;
     padding: 2rem;
     width: 100%;
+    color: black;
 }
 .navbar {
     display: flex;
@@ -60,13 +60,9 @@ body {
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: #1335F2;
+    background-color: #042940;
     backdrop-filter: blur(10px);
     z-index: 999;
-    transition: background-color 0.4s ease-in-out;
-}
-.navbar.scrolled {
-    background-color: #010D26;
 }
 .navbar-container {
     display: flex;
@@ -94,16 +90,14 @@ body {
     color: #fff;
     font-size: 1rem;
     width: 100%;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 10px;
     white-space: nowrap;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
 }
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a:active {
-    color: #fff;
-    background: #010D26;
+    border-bottom: 2px solid #DBF227;
 }
 .navbar-toggle {
     border: none;
@@ -126,7 +120,7 @@ body {
     padding-top: 20px;
 }
 .tag {
-    background-color: #3876F2;
+    background-color: #005C53;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
