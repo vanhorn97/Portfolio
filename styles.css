@@ -19,10 +19,19 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-top: 30px;
 }
 .btn:hover {
     background-color: #fff;
     color: #1335F2
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
 }
 #container {
     display: flex;
@@ -39,7 +48,7 @@ body {
 }
 #hero {
     text-align: center;
-    background-color: red;
+    background-color: black;
     padding: 2rem;
     width: 100%;
 }
@@ -51,9 +60,13 @@ body {
     width: 100%;
     position: sticky;
     top: 0;
-    background: #1335F2;
+    background-color: #1335F2;
     backdrop-filter: blur(10px);
     z-index: 999;
+    transition: background-color 0.4s ease-in-out;
+}
+.navbar.scrolled {
+    background-color: #010D26;
 }
 .navbar-container {
     display: flex;
@@ -91,7 +104,6 @@ body {
 .navbar-container .navbar-menu li a:active {
     color: #fff;
     background: #010D26;
-    box-shadow: 0 0 5px #010D26, 0 0 10px #010D26, 0 0 15px #010D26;
 }
 .navbar-toggle {
     border: none;
@@ -100,17 +112,18 @@ body {
     cursor: pointer;
     display: none;
 }
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    }
+#hero h1 {
+    padding-bottom: 20px;
+}
+#skills {
+    padding-top: 30px;
+}
 .skill-map {
     display: flex;
     gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 }
 .tag {
     background-color: #3876F2;
@@ -154,12 +167,12 @@ Responsive Styles
         align-items: flex-start;
         gap: 3rem !important;
         position: fixed;
-        height: 60vh;
+        height: 100vh;
         width: 250px;
         top: 0;
         right: -250px;
         padding: 5rem 1.5rem;
-        background: linear-gradient(180deg, #1335F2, #010D26);
+        background-color: black;
         z-index: 998;
         transition: right 0.3s ease;
     }
