@@ -1,14 +1,20 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
+ul {
+    padding: 0;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     background-color: #042940;
     color: #fff;
+}
+p {
+    line-height: 1.4;
+    font-size: calc(1rem + .3vw)
 }
 .btn {
     padding: 10px 20px;
@@ -19,8 +25,8 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.7s ease;
-    margin-top: 30px;
-    font-weight: bold;
+    margin-top: 80px;
+    font-weight: 600;
 }
 .btn:hover {
     background-color: #9FC131;
@@ -33,11 +39,6 @@ body {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
 }
-#container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #header {
     height: 70vh;
     width: 100%;
@@ -45,12 +46,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 2em;
 }
 #hero {
     background-color: #D6D58E;
-    padding: 2rem;
+    padding: 2rem 20rem;
     width: 100%;
-    color: black;
+    color: #042940;
+}
+.intro {
+    font-size: calc(1.5rem + 1vw);
 }
 .navbar {
     display: flex;
@@ -108,6 +113,7 @@ body {
 }
 #hero h1 {
     padding-bottom: 20px;
+    font-size: calc(1.6rem + 1vw);
 }
 #skills {
     padding-top: 30px;
@@ -129,28 +135,43 @@ body {
 }
 .work-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 2rem;
     justify-content: center;
     padding: 2rem;
 }
 .card {
-    background: #1335F2;
-    color: #fff;
+    background: #DBF227;
+    color: #042940;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+
 }
 /****************************
 Responsive Styles
 ****************************/
-
+@media (max-width: 1440px) {
+    #hero {
+        padding: 2rem 30rem;
+    }    
+}
+@media (max-width: 1024px) {
+    #hero {
+        padding: 2rem 10rem;
+    }
+}
 @media (max-width: 768px) {
+    #hero {
+        padding: 2rem;
+    }
     .contact-wrapper {
         display: flex;
         gap: 1rem;
+    }
+    .work-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
     }
     .navbar {
         backdrop-filter: none;
@@ -164,7 +185,7 @@ Responsive Styles
         height: 100vh;
         width: 250px;
         top: 0;
-        right: -250px;
+        right: -400px;
         padding: 5rem 1.5rem;
         background-color: black;
         z-index: 998;
@@ -173,9 +194,6 @@ Responsive Styles
     .navbar-menu.active {
         display: flex;
         right: 0;
-    }
-    .navbar-container .navbar-menu li a {
-        font-size: 1.4rem;
     }
     .navbar-toggle {
         display: block;
@@ -196,11 +214,11 @@ Responsive Styles
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.5); /* dim background */
+        background: rgba(0,0,0,0.5);
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease;
-        z-index: 997; /* sits below sidebar */
+        z-index: 997; 
     }
     .overlay.active {
         opacity: 1;
@@ -208,14 +226,16 @@ Responsive Styles
     }
 }
 @media (max-width: 480px) {
-    .navbar-container {
-        padding: 0 1rem;
-    }
     .navbar-logo {
-        font-size: 1.7rem;
+        display: none;
     }
-    .navbar-container .navbar-menu li a {
-        font-size: 1.2rem;
-        padding: 3px 15px;
+    .navbar-container {
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 320px) {
+    .skill-map {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
