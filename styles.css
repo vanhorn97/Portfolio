@@ -5,7 +5,7 @@
     list-style: none;
 }
 section {
-    padding-block: 5rem;
+    padding: 3rem;
 }
 ul {
     padding: 0;
@@ -45,6 +45,13 @@ p {
     background-color: #fff;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
+}
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 #header {
     height: 70vh;
@@ -91,13 +98,13 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
-.navbar-container .navbar-menu {
+.navbar-menu {
     display: flex;
     gap: 1.3rem;
     list-style: none;
     text-align: center;
 }
-.navbar-container .navbar-menu li a {
+.navbar-menu li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
@@ -105,9 +112,9 @@ p {
     padding: 10px 10px;
     white-space: nowrap;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: border-bottom 0.4s ease-in-out;
 }
-.navbar-container .navbar-menu li a:hover{
+.navbar-menu li a:hover{
     border-bottom: 2px solid #DBF227;
 }
 .navbar-toggle {
@@ -121,8 +128,9 @@ p {
     padding-bottom: 20px;
     font-size: calc(1.6rem + 1vw);
 }
-#skills {
-    padding-top: 30px;
+#skills p {
+    font-size: .8rem;
+    text-align: center;
 }
 .skill-map {
     display: flex;
@@ -137,7 +145,6 @@ p {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
-    margin-right: 5px;
 }
 .work-wrapper {
     display: flex;
@@ -162,7 +169,7 @@ Responsive Styles
 ****************************/
 @media (max-width: 1440px) {
     #hero {
-        padding: 2rem 30rem;
+        padding: 2rem 10rem;
     }    
 }
 @media (max-width: 1024px) {
