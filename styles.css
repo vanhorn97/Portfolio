@@ -164,6 +164,18 @@ p {
     width: 30px;
     height: auto;
 }
+.wrapper {
+    padding-block: 3rem;
+    padding-inline: 8rem;
+}
+.wrapper h1 {
+    margin-bottom: 40px;
+    font-size: 4rem;
+    line-height: 1;
+}
+.wrapper p, .wrapper ul li {
+    line-height: 1.8;
+}
 /****************************
 Responsive Styles
 ****************************/
