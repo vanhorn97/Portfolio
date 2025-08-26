@@ -27,10 +27,6 @@ body {
     background-color: var(--primary-color);
     color: #fff;
 }
-p {
-    line-height: 1.4;
-    font-size: calc(1rem + .3vw)
-}
 .btn {
     padding: 10px 20px;
     background-color: var(--secondary-color);
@@ -58,6 +54,13 @@ p {
     width: 50%;
     height: 100%;
     border: solid 2px blue;
+}
+.work-wrapper a {
+    width: 100%;
+}
+.copyright {
+    text-align: center;
+    font-size: .6rem
 }
 form {
     width: 50%;
@@ -94,6 +97,12 @@ select {
   border-radius: 5px;
   border: none;
   padding: .5rem;
+}
+h1  {
+    font-size: clamp(3rem, 1rem + 2vw, 4rem);
+}
+h2 {
+    font-size: clamp(1.5rem, 1rem + 2vw, 3rem)
 }
 #header {
     height: 70vh;
@@ -197,6 +206,7 @@ select {
     color: var(--primary-color);
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
 }
 .social {
     width: 30px;
@@ -321,6 +331,9 @@ Responsive Styles
     }
     .navbar-container {
         justify-content: flex-end;
+    }
+    form {
+        width: 100%;
     }
 }
 @media (max-width: 320px) {
