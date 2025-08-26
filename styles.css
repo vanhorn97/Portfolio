@@ -184,7 +184,7 @@ h4 {
 .navbar-menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: clamp(.8rem, 1rem + 1vw, 1rem);
     white-space: nowrap;
     cursor: pointer;
     transition: border-bottom 0.3s ease-in-out;
@@ -242,6 +242,17 @@ h4 {
 }
 .wrapper p, .wrapper ul li {
     line-height: 1.8;
+}
+input[type="submit"] {
+    background-color: var(--secondary-color);
+    font-family: var(--font-stack);
+    font-weight: 800;
+    font-size: .8rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: var(--accent-color-1);
 }
 /****************************
 Responsive Styles
