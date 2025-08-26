@@ -10,7 +10,7 @@
     --accent-color-1: #9FC131;
     --accent-color-2: #D6D58E;
     --accent-color-3: #005C53;
-    --font-stack: 'Roboto Flex', Arial, sans-serif;
+    --font-stack: 'Ruda', Arial, sans-serif;
 }
 section {
     padding: 3rem;
@@ -99,10 +99,15 @@ select {
   padding: .5rem;
 }
 h1  {
+    font-family: 'Grenze', serif;
     font-size: clamp(3rem, 1rem + 2vw, 4rem);
+    line-height: 1;
 }
 h2 {
-    font-size: clamp(1.5rem, 1rem + 2vw, 3rem)
+    font-family: 'Grenze', serif;
+    font-size: clamp(1.9rem, 1rem + 2vw, 3rem);
+    line-height: 1;
+    margin-bottom: 10px;
 }
 #header {
     height: 70vh;
@@ -118,9 +123,6 @@ h2 {
     padding: 2rem 20rem;
     width: 100%;
     color: var(--primary-color);
-}
-.intro {
-    font-size: calc(1.5rem + 1vw);
 }
 .navbar {
     position: sticky;
@@ -142,6 +144,8 @@ h2 {
     padding: 0 2rem;
 }
 .navbar-logo {
+    font-family: 'Grenze';
+    font-weight: 400;
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
@@ -171,10 +175,6 @@ h2 {
     border: none;
     padding: 10px;
     cursor: pointer;
-}
-#hero h1 {
-    padding-bottom: 20px;
-    font-size: calc(1.6rem + 1vw);
 }
 #skills p {
     font-size: .8rem;
