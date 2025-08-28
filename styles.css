@@ -10,10 +10,11 @@
     --accent-color-1: #9FC131;
     --accent-color-2: #D6D58E;
     --accent-color-3: #005C53;
+    --font-heading: 'Grenze', serif;
     --font-stack: 'Ruda', Arial, sans-serif;
 }
 section {
-    padding: 3rem;
+    padding: 5rem 3rem;
 }
 section:last-of-type {
     padding-top: 0;
@@ -48,27 +49,23 @@ body {
     display: flex;
     gap: 20px;
 }
-.btn {
+.btn, .btn-2 {
     padding: 10px 20px;
-    background-color: var(--secondary-color);
-    color: #042940;
-    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.4s ease;
     font-weight: 600;
 }
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
 .btn-2 {
-    padding: 10px 20px;
     background-color: var(--primary-color);
     color: #fff;
     border: 1px solid #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.4s ease;
-    font-weight: 600;
 }
 .btn:hover {
     background-color: var(--accent-color-1);
@@ -90,9 +87,12 @@ body {
     transition: all 0.3s ease-in-out;
 }
 #bulb {
-    width: 50%;
-    height: 100%;
-    border: solid 2px blue;
+    flex: 1;
+    background-image: url("assets/bulb.svg");
+    background-position: right;
+    background-size: contain;  /* entire image always fits */
+    background-repeat: no-repeat;
+    transform: translateX();
 }
 .work-wrapper a {
     width: 100%;
@@ -137,27 +137,32 @@ select {
   border: none;
   padding: .5rem;
 }
-h1  {
-    font-family: 'Grenze', serif;
+h1, h2, h3, h4 {
+    line-height: 1;
+}
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+h4 {
+    font-family: var(--font-stack);
+}
+h1  { 
     font-size: clamp(3rem, 1rem + 2vw, 4rem);
     line-height: 1;
 }
 h2 {
-    font-family: 'Grenze', serif;
     font-size: clamp(1.9rem, 1rem + 2vw, 3rem);
     line-height: 1;
     margin-bottom: 20px;
 }
 h3 {
-    font-family: 'Grenze', serif;
     font-size: clamp(1.2rem, 1rem + 2vw, 2rem);
 }
 h4 {
-    font-family: 'Ruda', sans-serif;
     font-size: clamp(1.2rem, 1rem + 2vw, 2rem);
 }
 #header {
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -166,10 +171,18 @@ h4 {
     padding: 0 2em;
 }
 #hero {
-    background-color: var(--accent-color-2);
-    padding: 2rem 20rem;
-    width: 100%;
-    color: var(--primary-color);
+    position: relative;
+    isolation: isolate;
+    padding: 5rem 20rem;
+    color: #fff;
+}
+#hero::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color-3);
+    inset: 0;
+    transform: skewY(-3deg);
+    z-index: -1;
 }
 .navbar {
     position: sticky;
@@ -229,15 +242,36 @@ h4 {
     padding: 10px;
     cursor: pointer;
 }
-#skills p {
-    font-size: .8rem;
-    text-align: center;
+#skills {
+    padding: 0;
+    position: relative;
+    background-color: var(--accent-color-2);
+    color: var(--primary-color);
+}
+#skills::before,
+#skills::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: var(--primary-color);
+    -webkit-mask-image: url('assets/triangle.svg');
+}
+#skills:after {
+    background-color: #D6D58E;
+}
+#wrapper {
+    padding: 3rem;
+}
+.skills-text {
+    margin-bottom: 2rem;
 }
 .skill-map {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .tag {
     background-color: var(--accent-color-3);
@@ -251,6 +285,9 @@ h4 {
     flex-direction: row;
     gap: 2rem;
     justify-content: center;
+}
+#work {
+    padding: 7rem 3rem;
 }
 .card {
     flex: 1;
@@ -294,19 +331,25 @@ Responsive Styles
 ****************************/
 @media (max-width: 1440px) {
     #hero {
-        padding: 2rem 10rem;
+        padding: 5rem 10rem;
     }    
+    #wrapper {
+        padding: 2rem 10rem;
+    }
 }
 @media (max-width: 1024px) {
     #hero {
+        padding: 5rem 10rem;
+    }
+    #wrapper, section {
         padding: 2rem 10rem;
     }
 }
 @media (max-width: 768px) {
-    #hero {
-        padding: 2rem;
+    #wrapper, section, #work, #hero {
+        padding: 7rem 8rem;
     }
-    .intro {
+     .intro {
         margin-bottom: 80px;
     }
     .hero-buttons {
@@ -326,24 +369,8 @@ Responsive Styles
         align-items: center;
         justify-content: center;
     }
-    #contact-form {
-        display: flex;
-    }
     fieldset {
         width: 100%;
-    }
-    input,
-    textarea,
-    select {
-        margin: 10px 0 0 0;
-        width: 100%;
-        min-height: 2.5em;
-        border-radius: 5px;
-        border: none;
-        padding: .5rem;
-    }
-    section {
-        padding: 2rem;
     }
     .navbar {
         backdrop-filter: none;
@@ -412,7 +439,7 @@ Responsive Styles
 @media (max-width: 480px) {
     .navbar-logo {
         display: flex;
-        align-self: center;
+        align-self: flex-start;
     }
     .navbar-container {
         justify-content: flex-end;
