@@ -13,9 +13,6 @@
     --font-heading: 'Grenze', serif;
     --font-stack: 'Ruda', Arial, sans-serif;
 }
-section {
-    padding: 5rem 3rem;
-}
 section:last-of-type {
     padding-top: 0;
 }
@@ -42,7 +39,7 @@ body {
     background-color: var(--primary-color);
     color: #fff;
 }
-.intro {
+.intro-container {
     margin-bottom: 30px;
 }
 .hero-buttons {
@@ -168,12 +165,12 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 2em;
+    /*padding: 0 2em;*/
 }
 #hero {
     position: relative;
     isolation: isolate;
-    padding: 5rem 20rem;
+    /*padding: 5rem 20rem;*/
     color: #fff;
 }
 #hero::after {
@@ -260,9 +257,6 @@ h4 {
 #skills:after {
     background-color: #D6D58E;
 }
-#wrapper {
-    padding: 3rem;
-}
 .skills-text {
     margin-bottom: 2rem;
 }
@@ -286,8 +280,11 @@ h4 {
     gap: 2rem;
     justify-content: center;
 }
-#work {
-    padding: 7rem 3rem;
+#wrapper {
+    max-width: 1600px;
+    margin: auto;
+    padding-inline: clamp(2rem, 1rem + 9vw, 8rem);
+    padding-block: clamp(6rem, 1rem + 9vw, 10rem);
 }
 .card {
     flex: 1;
@@ -330,26 +327,13 @@ input[type="submit"]:hover {
 Responsive Styles
 ****************************/
 @media (max-width: 1440px) {
-    #hero {
-        padding: 5rem 10rem;
-    }    
-    #wrapper {
-        padding: 2rem 10rem;
-    }
+        
 }
 @media (max-width: 1024px) {
-    #hero {
-        padding: 5rem 10rem;
-    }
-    #wrapper, section {
-        padding: 2rem 10rem;
-    }
+    
 }
 @media (max-width: 768px) {
-    #wrapper, section, #work, #hero {
-        padding: 7rem 8rem;
-    }
-     .intro {
+    .intro-container {
         margin-bottom: 80px;
     }
     .hero-buttons {
@@ -359,6 +343,9 @@ Responsive Styles
     .contact-wrapper {
         display: flex;
         gap: 1rem;
+    }
+    form {
+        width: 100%;
     }
     .work-wrapper {
         flex-direction: column;
@@ -439,18 +426,17 @@ Responsive Styles
 @media (max-width: 480px) {
     .navbar-logo {
         display: flex;
-        align-self: flex-start;
     }
     .navbar-container {
-        justify-content: flex-end;
-    }
-    form {
-        width: 100%;
+        justify-content: space-between;
     }
 }
 @media (max-width: 320px) {
     .skill-map {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .navbar-logo {
+        display: none;
     }
 }
