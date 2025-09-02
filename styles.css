@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -45,6 +48,8 @@ body {
 .hero-buttons {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 .btn, .btn-2 {
     padding: 10px 20px;
@@ -83,14 +88,6 @@ body {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
 }
-#bulb {
-    flex: 1;
-    background-image: url("assets/bulb.svg");
-    background-position: right;
-    background-size: contain;  /* entire image always fits */
-    background-repeat: no-repeat;
-    transform: translateX();
-}
 .work-wrapper a {
     width: 100%;
 }
@@ -101,9 +98,8 @@ body {
 form {
     width: 50%;
 }
-#contact-form {
-    display: flex;
-    flex-direction: row;
+#contact-form h1 {
+    margin-bottom: 4rem;
 }
 .contact-wrapper {
     display: flex;
@@ -134,6 +130,10 @@ select {
   border: none;
   padding: .5rem;
 }
+p {
+    line-height: 1.6;
+    font-size: clamp(.7rem, .7rem + 0.5vw, 1.1rem);
+}
 h1, h2, h3, h4 {
     line-height: 1;
 }
@@ -144,19 +144,19 @@ h4 {
     font-family: var(--font-stack);
 }
 h1  { 
-    font-size: clamp(3rem, 1rem + 2vw, 4rem);
+    font-size: clamp(3rem, 3rem + 3vw, 4rem);
     line-height: 1;
 }
 h2 {
-    font-size: clamp(1.9rem, 1rem + 2vw, 3rem);
+    font-size: clamp(2rem, 2rem + 2vw, 3rem);
     line-height: 1;
     margin-bottom: 20px;
 }
 h3 {
-    font-size: clamp(1.2rem, 1rem + 2vw, 2rem);
+    font-size: clamp(1.4rem, 1.4rem + 1.8vw, 2rem);
 }
 h4 {
-    font-size: clamp(1.2rem, 1rem + 2vw, 2rem);
+    font-size: clamp(1.4rem, 1.4rem + 1.8vw, 2rem);
 }
 #header {
     height: 80vh;
@@ -165,12 +165,10 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*padding: 0 2em;*/
 }
 #hero {
     position: relative;
     isolation: isolate;
-    /*padding: 5rem 20rem;*/
     color: #fff;
 }
 #hero::after {
@@ -283,7 +281,7 @@ h4 {
 #wrapper {
     max-width: 1600px;
     margin: auto;
-    padding-inline: clamp(2rem, 1rem + 9vw, 8rem);
+    padding-inline: clamp(2rem, 1rem + 9vw, 7rem);
     padding-block: clamp(6rem, 1rem + 9vw, 10rem);
 }
 .card {
@@ -336,10 +334,6 @@ Responsive Styles
     .intro-container {
         margin-bottom: 80px;
     }
-    .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
     .contact-wrapper {
         display: flex;
         gap: 1rem;
@@ -351,10 +345,6 @@ Responsive Styles
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
-    }
-    #contact {
-        align-items: center;
-        justify-content: center;
     }
     fieldset {
         width: 100%;
@@ -430,13 +420,14 @@ Responsive Styles
     .navbar-container {
         justify-content: space-between;
     }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 @media (max-width: 320px) {
     .skill-map {
         flex-direction: row;
         flex-wrap: wrap;
-    }
-    .navbar-logo {
-        display: none;
     }
 }
