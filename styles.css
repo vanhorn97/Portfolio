@@ -108,13 +108,18 @@ form {
     justify-content: center;
     gap: 1rem;
 }
+.copyright {
+    margin: 30px;
+    padding-top: 20px;
+    border-top: 1.3px solid rgba(0,0,0,0.8)
+}
 fieldset {
     width: 100%;
     border: none;
     padding: 0;
 }
-footer {
-    padding-bottom: 2rem;
+footer p {
+    font-size: .7rem;
 }
 label {
   display: block;
